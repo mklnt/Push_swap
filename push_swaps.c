@@ -27,7 +27,7 @@ void	sa(t_node **stack_b)
 	write(1, "sb\n, 3");
 }
 
-void	sa(t_node **stack_a)
+void	sa(t_node **stack_a, t_node **stack_b)
 {
 	swap_values(*stack_a);
 	swap_values(*stack_b);
