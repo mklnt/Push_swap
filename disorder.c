@@ -21,8 +21,9 @@ float compute_disorder(stack a)
 			pairs += 1;
 			if (a[i] < a[j])
 				mistakes += 1;
+			j++;
 		}
-
+		i++;
 	}
 
 	return (mistakes / pairs);
