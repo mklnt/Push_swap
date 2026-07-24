@@ -19,15 +19,27 @@ for the complex I used a modified Radix called Last Significant Digit, or LSD fo
 
 take a sequence 7 6 1 5 4 2 3 
 make binary     111 110 001 101 100 010 011
-go to first element, if %1 is 0 goes to the head of stack b (rb, pb, rrb)(to maintain the order in which they are found) otherwise at the bottom (pb , rb)
-until a is empty 
-and b is        110 100 010 111 001 101 011
-same logic as before but if stack a is empty we do it with b and viceversa,
-but every iteration we go to the next digit, so if stack b[0]/10 % 1 is 0 top else bottom;
+go to first element, if %1 is 1 goes to the stack b  pb, rrb)(to maintain the order in which they are found)
+until a is over
+so b is         111 001 101 011
+and a is        110 100 010
 
-so b is empty and a will be
+b is addes to the bottom of a with the order is found
+                110 100 010 111 001 101 011
+again with the second digit so arr a[1]/10 % 1
+
+stack a         100 001 101 
+stack b         110 010 111 011
+
+add toghether
                 100 001 101 110 010 111 011
-iterating 
-                001 010 011 100 101 110 111
-that converted is
+again with last digit
+
+stack a         001 010 011
+stack b         100 101 110 111
+
+add together    001 010 011 100 101 110 111
+
+done
+
                 1   2    3   4   5   6   7   

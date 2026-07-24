@@ -14,43 +14,27 @@ void	lsd(int *arr_a, int **arr_b)
 {
 	int	exp;
 	int	max;
+	int	i;
 
 	exp = 1;
+	i = 0;
 	convert_array(arr_a);
 	max = get_max(arr_a);
 	while (max / exp != 0)
 	{
-		while (arr_a)
+		while (arr_a[i] != '\0')
 		{
-			if ((arr_a[0] / exp) % 1 = 0)
-				rb;
-				pb;
-				rrb
-			else
-			{
+			if ((arr_a[i] / exp) % 1 = 1)
 				pb;
 				rb;
-			}
+			i++;
 		}
-		while (arr_b)
-		{
-			if ((arr_b[0] / exp ) % 1 = 0)
-				ra;
-				pa;
-				rra;
-			else
-			{
-				pa;
-				ra;
-			}
-		}
-		exp *= 10;
-	}
-	if (!arr_a)
 		while (arr_b)
 		{
 			pa;
 			ra;
 		}
+		exp *= 10;
+	}
 	revert_binary(arr_a);//and viceversa
 }
