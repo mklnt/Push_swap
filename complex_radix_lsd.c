@@ -22,8 +22,10 @@ void	lsd(int *arr_a, int **arr_b)
 	{
 		while (arr_a)
 		{
-			if (arr_a[0] / exp = 0)
+			if ((arr_a[0] / exp) % 1 = 0)
+				rb;
 				pb;
+				rrb
 			else
 			{
 				pb;
@@ -32,8 +34,10 @@ void	lsd(int *arr_a, int **arr_b)
 		}
 		while (arr_b)
 		{
-			if (arr_b[0] / exp = 0)
+			if ((arr_b[0] / exp ) % 1 = 0)
+				ra;
 				pa;
+				rra;
 			else
 			{
 				pa;
