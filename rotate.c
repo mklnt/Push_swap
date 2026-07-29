@@ -5,22 +5,18 @@ static void	rotate_stack(t_node **stack)
 	t_node	*first;
 	t_node	*last;
 
-	// 1. Guard clause: Do nothing if stack has 0 or 1 element
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 
 	first = *stack;
 	last = *stack;
 
-	// 2. Advance 'last' to the end of the list
 	while (last->next)
 		last = last->next;
 
-	// 3. Update the stack head to point to the 2nd element
 	*stack = first->next;
 	(*stack)->prev = NULL;
 
-	// 4. Attach 'first' to the end of the list
 	last->next = first;
 	first->prev = last;
 	first->next = NULL;

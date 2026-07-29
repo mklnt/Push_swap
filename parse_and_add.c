@@ -6,18 +6,19 @@
 /*   By: ddroge <ddroge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 16:32:45 by ddroge            #+#    #+#             */
-/*   Updated: 2026/07/28 18:49:02 by ddroge           ###   ########.fr       */
+/*   Updated: 2026/07/29 11:02:04 by ddroge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <limits.h>
 #include "header.h"
+#include <stdlib.h>
 
 int	has_invalid_number(char *str);
 int	string_to_number(char *str, int *number);
 int	check_dup(t_node *stack_a, int value);
-int	add_to_stack(t_node *stack_a, int value);
+int	add_to_stack(t_node **stack_a, int value);
 
 int	main(void)
 {
@@ -39,7 +40,7 @@ int	parse_and_add(t_node **stack_a, char *str)
 		return (0);
 	if (string_to_number(str, &value) == 0)
 		return (0);
-	if (check_dup(stack_a, value) == 1)
+	if (check_dup(*stack_a, value) == 1)
 		return (0);
 	if (add_to_stack(stack_a, value) == 0)
 		return (0);
@@ -108,7 +109,6 @@ int	add_to_stack(t_node **stack_a, int number_value)
 {
 	t_node	*new_node;
 	t_node	*last;
-	int		index;
 
 	last = *stack_a;
 	new_node = malloc(sizeof(t_node));
