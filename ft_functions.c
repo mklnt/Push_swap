@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dec_to_bin.c                                       :+:      :+:    :+:   */
+/*   ft_functions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddroge <ddroge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/28 12:21:01 by ddroge            #+#    #+#             */
-/*   Updated: 2026/07/29 11:27:50 by ddroge           ###   ########.fr       */
+/*   Created: 2026/07/29 11:20:45 by ddroge            #+#    #+#             */
+/*   Updated: 2026/07/29 11:28:15 by ddroge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_strlen(char *str);
-
-int	dec_to_bin(char *bin_value)
+int ft_int_strlen(int str[])
 {
 	int	i;
-	int	dec_result;
-
+	// printf("This is str: %i", str[i]);
 	i = 0;
-	dec_result = 0;
-	while (bin_value[i])
+	while (!str[i])
 	{
-		dec_result = (dec_result * 2) + (bin_value[i] - '0');
+		printf("This is str: %i", str[i]);
 		i++;
 	}
-	return (dec_result);
+	return (i);
 }
-
-// int	main(void)
-// {
-//     char *value = "11001";
-//     printf("%d", dec_to_bin(value));
-// }
-

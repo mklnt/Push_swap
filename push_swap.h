@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dec_to_bin.c                                       :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddroge <ddroge@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/28 12:21:01 by ddroge            #+#    #+#             */
-/*   Updated: 2026/07/29 11:27:50 by ddroge           ###   ########.fr       */
+/*   Created: 2026/07/29 11:21:31 by ddroge            #+#    #+#             */
+/*   Updated: 2026/07/29 11:25:36 by ddroge           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <stdio.h>
+#include <stdio.h>
+#include <limits.h>
+#include <stdlib.h>
 
-int	ft_strlen(char *str);
-
-int	dec_to_bin(char *bin_value)
+typedef struct s_node
 {
-	int	i;
-	int	dec_result;
+	int				value;
+	int				index;
+	struct s_node	*next;
+	struct s_node	*prev;
+}	t_node;
 
-	i = 0;
-	dec_result = 0;
-	while (bin_value[i])
-	{
-		dec_result = (dec_result * 2) + (bin_value[i] - '0');
-		i++;
-	}
-	return (dec_result);
-}
-
-// int	main(void)
-// {
-//     char *value = "11001";
-//     printf("%d", dec_to_bin(value));
-// }
-
+int	has_invalid_number(char *str);
+int	string_to_number(char *str, int *number);
+int	check_dup(t_node *stack_a, int value);
+int	add_to_stack(t_node **stack_a, int value);
